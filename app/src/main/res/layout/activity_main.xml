@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brygo.cryptoapp.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/clearText"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/keyText"
+            android:layout_below="@+id/spinner"
+            android:layout_marginTop="34dp"
+            android:ems="10"
+            android:hint="Message en clair"
+            android:inputType="textMultiLine"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="119dp" />
+
+        <EditText
+            android:id="@+id/codedText"
+            android:layout_width="340dp"
+            android:layout_height="69dp"
+            android:layout_alignStart="@+id/spinner"
+            android:layout_below="@+id/keyText"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="66dp"
+            android:ems="10"
+            android:hint="Message Codé"
+            android:inputType="textMultiLine"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="388dp" />
+
+        <Button
+            android:id="@+id/buttonCrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/clearText"
+            android:layout_below="@+id/clearText"
+            android:layout_marginTop="8dp"
+            android:text="Crypter"
+            tools:layout_editor_absoluteX="273dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+        <Button
+            android:id="@+id/buttonDecrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/codedText"
+            android:layout_below="@+id/codedText"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="19dp"
+            android:entries="@array/spinnerItems"
+            android:text="Decrypter"
+            tools:layout_editor_absoluteX="273dp"
+            tools:layout_editor_absoluteY="469dp" />
+
+        <EditText
+            android:id="@+id/keyText"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/codedText"
+            android:layout_below="@+id/buttonCrypt"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:hint="Clé"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="279dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="395dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:entries="@array/spinnerItems"
+            app:layout_constraintStart_toStartOf="@+id/clearText"
+            tools:layout_editor_absoluteY="55dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/spinner"
+            android:layout_marginTop="15dp"
+            android:text="Selectionner un algorithme"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonCrypt"
+            android:layout_alignBottom="@+id/buttonCrypt"
+            android:layout_marginEnd="22dp"
+            android:layout_toStartOf="@+id/buttonCrypt"
+            android:text="Clear" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

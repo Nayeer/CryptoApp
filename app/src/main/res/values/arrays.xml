@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerItems">
+        <item>Atbash</item>
+        <item>Cesar</item>
+        <item>Vigenere</item>
+        <item>Playfair</item>
+        <item>HomophoniquePolybe</item>
+        <item>Transposition rectangulaire</item>
+        <item>Delastelle</item>
+    </string-array>
+</resources>
